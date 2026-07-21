@@ -1,0 +1,44 @@
+{
+  "name": "f1-cars-showcase",
+  "private": true,
+  "version": "0.1.0",
+  "author": "Waqas Zafar <waqas75> (GitHub: stranmous)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "inspect:models": "node scripts/inspect-glb.mjs",
+    "aero:generate": "node scripts/create-aero-guide-assets.mjs",
+    "aero:sources": "powershell -ExecutionPolicy Bypass -File scripts/blender/create-aero-guide-sources.ps1",
+    "aero:validate": "node scripts/validate-aero-guides.mjs",
+    "aero:export": "powershell -ExecutionPolicy Bypass -File scripts/blender/export-aero-guides.ps1",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource/barlow-condensed": "^5.2.8",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
+    "postprocessing": "^6.39.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "three": "0.182.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "0.182.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "globals": "^16.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.0.0",
+    "vite": "^8.1.4"
+  }
+}

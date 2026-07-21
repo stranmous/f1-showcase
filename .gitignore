@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.vite/
+coverage/
+*.log
+*.blend1
+
+# Temporary derivatives and inspection renders; approve/copy final runtime assets deliberately.
+asset-work/
+renders/
+public/models/*.tmp
+output/
+.playwright-cli/
+
+# Unnecessary folders for deployment / public repo
+docs/
+CarModels/
+Skills/
+.codex/
+video/
