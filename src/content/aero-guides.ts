@@ -31,11 +31,13 @@ type AeroGuideLoadState =
 
 type CachedAeroGuideLoadState = AeroGuideLoadState & { carId: CarId }
 
+const guideBaseUrl = import.meta.env.BASE_URL
+
 const guideUrls: Readonly<Record<CarId, string>> = {
-  mp44: '/aero-guides/mp44.json',
-  f2002: '/aero-guides/f2002.json',
-  w11: '/aero-guides/w11.json',
-  rb19: '/aero-guides/rb19.json',
+  mp44: `${guideBaseUrl}aero-guides/mp44.json`,
+  f2002: `${guideBaseUrl}aero-guides/f2002.json`,
+  w11: `${guideBaseUrl}aero-guides/w11.json`,
+  rb19: `${guideBaseUrl}aero-guides/rb19.json`,
 }
 
 const guideCache = new Map<CarId, Promise<AeroGuideDocument>>()
